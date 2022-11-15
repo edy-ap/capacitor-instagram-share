@@ -1,0 +1,137 @@
+{
+  "api": {
+    "name": "InstagramSharePlugin",
+    "slug": "instagramshareplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "sharePhoto",
+        "signature": "(options: SharePhotoOptions) => Promise<ShareResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "SharePhotoOptions"
+          }
+        ],
+        "returns": "Promise<ShareResult>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ShareResult",
+          "SharePhotoOptions"
+        ],
+        "slug": "sharephoto"
+      },
+      {
+        "name": "shareVideo",
+        "signature": "(options: ShareVideoOptions) => Promise<ShareResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ShareVideoOptions"
+          }
+        ],
+        "returns": "Promise<ShareResult>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ShareResult",
+          "ShareVideoOptions"
+        ],
+        "slug": "sharevideo"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ShareResult",
+      "slug": "shareresult",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "success",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "SharePhotoOptions",
+      "slug": "sharephotooptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "data",
+          "tags": [],
+          "docs": "Base64 encoded data",
+          "complexTypes": [],
+          "type": "any"
+        },
+        {
+          "name": "hashtags",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "sharedMode",
+          "tags": [],
+          "docs": "Only iOS: feedWeb, feedBrowser, shareSheet",
+          "complexTypes": [],
+          "type": "'automatic' | 'feed' | 'native' | 'web' | 'feedWeb' | 'feedBrowser' | 'shareSheet' | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ShareVideoOptions",
+      "slug": "sharevideooptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "path",
+          "tags": [],
+          "docs": "Path of the video file",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "hashtags",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "sharedMode",
+          "tags": [],
+          "docs": "Only iOS: feedWeb, feedBrowser, shareSheet",
+          "complexTypes": [],
+          "type": "'automatic' | 'feed' | 'native' | 'web' | 'feedWeb' | 'feedBrowser' | 'shareSheet' | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

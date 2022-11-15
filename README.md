@@ -42,25 +42,71 @@ TODO
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`sharePhoto(...)`](#sharephoto)
+* [`shareVideo(...)`](#sharevideo)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### sharePhoto(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+sharePhoto(options: SharePhotoOptions) => Promise<ShareResult>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                                            |
+| ------------- | --------------------------------------------------------------- |
+| **`options`** | <code><a href="#sharephotooptions">SharePhotoOptions</a></code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#shareresult">ShareResult</a>&gt;</code>
 
 --------------------
+
+
+### shareVideo(...)
+
+```typescript
+shareVideo(options: ShareVideoOptions) => Promise<ShareResult>
+```
+
+| Param         | Type                                                            |
+| ------------- | --------------------------------------------------------------- |
+| **`options`** | <code><a href="#sharevideooptions">ShareVideoOptions</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#shareresult">ShareResult</a>&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### ShareResult
+
+| Prop          | Type                 |
+| ------------- | -------------------- |
+| **`success`** | <code>boolean</code> |
+| **`message`** | <code>string</code>  |
+
+
+#### SharePhotoOptions
+
+| Prop             | Type                                                                                                  | Description                                |
+| ---------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **`data`**       | <code>any</code>                                                                                      | Base64 encoded data                        |
+| **`hashtags`**   | <code>string</code>                                                                                   |                                            |
+| **`sharedMode`** | <code>'automatic' \| 'feed' \| 'native' \| 'web' \| 'feedWeb' \| 'feedBrowser' \| 'shareSheet'</code> | Only iOS: feedWeb, feedBrowser, shareSheet |
+
+
+#### ShareVideoOptions
+
+| Prop             | Type                                                                                                  | Description                                |
+| ---------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **`path`**       | <code>string</code>                                                                                   | Path of the video file                     |
+| **`hashtags`**   | <code>string</code>                                                                                   |                                            |
+| **`sharedMode`** | <code>'automatic' \| 'feed' \| 'native' \| 'web' \| 'feedWeb' \| 'feedBrowser' \| 'shareSheet'</code> | Only iOS: feedWeb, feedBrowser, shareSheet |
 
 </docgen-api>

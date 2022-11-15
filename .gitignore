@@ -1,5 +1,7 @@
 # node files
-dist
+
+#Tmp
+#dist
 node_modules
 
 # iOS files
