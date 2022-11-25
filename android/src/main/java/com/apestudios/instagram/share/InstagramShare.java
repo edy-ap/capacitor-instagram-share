@@ -1,6 +1,17 @@
 package com.apestudios.instagram.share;
 
-import android.util.Log;
+import android.content.Intent;
+import android.net.Uri;
+
+import androidx.core.content.FileProvider;
+
+import com.getcapacitor.PluginCall;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class InstagramShare {
 
