@@ -42,7 +42,6 @@ TODO
 
 <docgen-index>
 
-* [`sharePhoto(...)`](#sharephoto)
 * [`shareVideo(...)`](#sharevideo)
 * [Interfaces](#interfaces)
 
@@ -50,21 +49,6 @@ TODO
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### sharePhoto(...)
-
-```typescript
-sharePhoto(options: SharePhotoOptions) => Promise<ShareResult>
-```
-
-| Param         | Type                                                            |
-| ------------- | --------------------------------------------------------------- |
-| **`options`** | <code><a href="#sharephotooptions">SharePhotoOptions</a></code> |
-
-**Returns:** <code>Promise&lt;<a href="#shareresult">ShareResult</a>&gt;</code>
-
---------------------
-
 
 ### shareVideo(...)
 
@@ -92,21 +76,10 @@ shareVideo(options: ShareVideoOptions) => Promise<ShareResult>
 | **`message`** | <code>string</code>  |
 
 
-#### SharePhotoOptions
-
-| Prop             | Type                                                                                                  | Description                                |
-| ---------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **`data`**       | <code>any</code>                                                                                      | Base64 encoded data                        |
-| **`hashtags`**   | <code>string</code>                                                                                   |                                            |
-| **`sharedMode`** | <code>'automatic' \| 'feed' \| 'native' \| 'web' \| 'feedWeb' \| 'feedBrowser' \| 'shareSheet'</code> | Only iOS: feedWeb, feedBrowser, shareSheet |
-
-
 #### ShareVideoOptions
 
-| Prop             | Type                                                                                                  | Description                                |
-| ---------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **`path`**       | <code>string</code>                                                                                   | Path of the video file                     |
-| **`hashtags`**   | <code>string</code>                                                                                   |                                            |
-| **`sharedMode`** | <code>'automatic' \| 'feed' \| 'native' \| 'web' \| 'feedWeb' \| 'feedBrowser' \| 'shareSheet'</code> | Only iOS: feedWeb, feedBrowser, shareSheet |
+| Prop       | Type                | Description            |
+| ---------- | ------------------- | ---------------------- |
+| **`path`** | <code>string</code> | Path of the video file |
 
 </docgen-api>

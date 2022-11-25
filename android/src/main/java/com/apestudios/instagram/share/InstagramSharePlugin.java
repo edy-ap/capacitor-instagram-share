@@ -9,14 +9,29 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "InstagramShare")
 public class InstagramSharePlugin extends Plugin {
 
-    private InstagramShare implementation = new InstagramShare();
+    private InstagramShare implementation;
+
+    @Override
+    public void load() {
+        implementation = new InstagramShare(this);
+    }
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void shareVideo(PluginCall call) {
+        String path = call.getString("path");
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        implementation.shareVideo(call, path);
+    }
+
+    @ActivityCallback
+    public void processShare(PluginCall call, ActivityResult result) {
+        Log.d(getLogTag(), "result Share: " + result.getResultCode());
+        Log.d(getLogTag(), "result Share: " + result.getData());
+
+        JSObject response = new JSObject();
+        response.put("success", true);
+        response.put("message", "Shared successfully");
+
+        call.resolve(response);
     }
 }

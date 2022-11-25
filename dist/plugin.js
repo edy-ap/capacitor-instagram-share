@@ -7,10 +7,6 @@ var capacitorInstagramShare = (function (exports, core) {
 
     class InstagramShareWeb extends core.WebPlugin {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        sharePhoto(_options) {
-            throw new Error('Not supported in web');
-        }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         shareVideo(_options) {
             throw new Error('Not supported in web');
         }
